@@ -1,5 +1,5 @@
 import logging
-from typing import List
+from typing import List, Optional
 
 
 logging.basicConfig(level=logging.DEBUG,filename="data.log", filemode="a", format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt="%d/%m/%Y %H:%M:%S")
@@ -11,7 +11,7 @@ class Question:
         self.answer = answer
 
 class Game:
-    def __init__(self, questions: List):
+    def __init__(self, questions: Optional[List[Question]]):
         self.questions = questions
         self.score = 0
     
@@ -33,7 +33,7 @@ class Game:
                     
             except Exception as e:
                 logging.error(e)
-        print("Game is finished")
+        print("Game is finished!")
         print(f"Your result is: {self.score}/{len(self.questions)}")      
         logging.info(f"Final score is: {self.score}/{len(self.questions)}")
 
