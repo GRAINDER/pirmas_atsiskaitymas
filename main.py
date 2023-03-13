@@ -16,6 +16,9 @@ class Game:
         self.score = 0
     
     def start_game(self) -> str:
+        player_name = input("Please enter Your name: ")
+        print(f"Hello {player_name}, welcome to the game!")
+        input("Press ENTER to start the game!")
         for question in self.questions:
             answer = input(question.ask)
  
@@ -42,5 +45,5 @@ q5 = Question("What is the capital of France?", "Paris")
 
 questions = [q1, q2, q3, q4, q5]
 
-quiz = Game(questions)
-quiz.start_game()
+test = Game(questions)
+test.start_game()
