@@ -18,7 +18,7 @@ class Game:
     def start_game(self) -> str:
         player_name = input("Please enter Your name: ")
         print(f"Hello {player_name}, welcome to the game!")
-        input("Press ENTER to start the game!")
+        input("Press ANY KEY to start the game!")
         for question in self.questions:
             answer = input(question.ask)
  
