@@ -1,5 +1,5 @@
 import logging
-from typing import List, Optional
+from typing import List
 
 
 logging.basicConfig(level=logging.DEBUG,filename="data.log", filemode="a", format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt="%d/%m/%Y %H:%M:%S")
@@ -11,7 +11,7 @@ class Question:
         self.answer = answer
 
 class Game:
-    def __init__(self, questions: Optional[List[Question]]):
+    def __init__(self, questions: List[Question]):
         self.questions = questions
         self.score = 0
     
@@ -43,7 +43,10 @@ q3 = Question("What is the capital of Estonia?", "Tallinn")
 q4 = Question("What is the capital of Italy?", "Rome")
 q5 = Question("What is the capital of France?", "Paris")
 
-questions = [q1, q2, q3, q4, q5]
+print(q2.ask)
+print(q2.answer)
 
-test = Game(questions)
-test.start_game()
+# questions = [q1, q2, q3, q4, q5]
+
+# test = Game(questions)
+# test.start_game()
